@@ -19,4 +19,7 @@ file_put_contents('/tmp/webhook.log', date('c') . " - Received webhook\n", FILE_
 // Run deployment script
 exec('/var/www/asna/deploy.sh >> /tmp/deploy.log 2>&1');
 echo "Deployment triggered";
+echo "Starting deployment..."
+git pull origin main
+echo "Deployment complete."
 
